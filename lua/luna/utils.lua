@@ -1,4 +1,4 @@
-local theme = require 'luna.theme'
+local theme = require('luna.theme')
 
 local M = {}
 
@@ -18,11 +18,12 @@ end
 
 M.load = function(colors, exec_autocmd)
   local config = require("luna.config").options
-
+  print("config", vim.inspect(config))
   -- Reset all highlighting to the defaults.
-  if vim.g.colors_name then
-    vim.cmd("hi clear")
-  end
+  print("colors_name", vim.g.colors_name)
+  -- if vim.g.colors_name then
+  --   vim.cmd("hi clear")
+  -- end
 
   -- Reset all colors to the defaults.
   if vim.fn.exists("syntax_on") then
@@ -41,8 +42,6 @@ M.load = function(colors, exec_autocmd)
   for group, color in pairs(highlights) do
     M.highlight(group, color)
   end
-
-  theme.load_terminal()
 
   if exec_autocmd then
     vim.cmd("doautocmd ColorScheme")

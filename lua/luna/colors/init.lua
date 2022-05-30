@@ -1,7 +1,7 @@
 local M = {}
 
 local luna = require("luna.colors.luna")
-local titan = require("luna.colors.titan")
+-- local titan = require("luna.colors.titan")
 
 M.load = function()
   local theme = require("luna.config").options.theme
@@ -12,8 +12,9 @@ M.load = function()
 
   if theme == "luna" then
     return luna
-  else
-    return titan
+  -- else
+  --   return titan
+  -- end
   end
 end
 
