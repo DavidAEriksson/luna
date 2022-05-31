@@ -12,9 +12,6 @@ M.load = function()
 
   if theme == "luna" then
     return luna
-  -- else
-  --   return titan
-  -- end
   end
 end
 

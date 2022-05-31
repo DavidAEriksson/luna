@@ -7,4 +7,6 @@ package.loaded["luna.theme"] = nil
 vim.api.nvim_set_keymap('n', ',r', ':luafile dev/luna.lua<CR>', {})
 vim.api.nvim_set_keymap('n', ',s', ':colorscheme onenord<CR>', {})
 
-local luna = require("luna").setup({theme = "luna"})
+local luna = require("luna")
+
+luna.load(false)

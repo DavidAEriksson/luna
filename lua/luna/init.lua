@@ -1,19 +1,17 @@
--- local utils = require('luna.utils')
--- local theme = require('luna.theme')
-
 local config = require("luna.config")
 local utils = require("luna.utils")
 
-local M = {}
+local luna = {}
 
-M.setup = function(options)
+function luna.setup(options)
   config.set_options(options)
-  M.load(true)
+  luna.load(true)
 end
 
-M.load = function(exec_autocmd)
+function luna.load(exec_autocmd)
   local colors = require("luna.colors").load()
+
   utils.load(colors, exec_autocmd)
 end
 
-return M
+return luna
