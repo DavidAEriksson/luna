@@ -18,12 +18,10 @@ end
 
 M.load = function(colors, exec_autocmd)
   local config = require("luna.config").options
-  print("config", vim.inspect(config))
   -- Reset all highlighting to the defaults.
-  print("colors_name", vim.g.colors_name)
-  -- if vim.g.colors_name then
-  --   vim.cmd("hi clear")
-  -- end
+  if vim.g.colors_name then
+    vim.cmd("hi clear")
+  end
 
   -- Reset all colors to the defaults.
   if vim.fn.exists("syntax_on") then

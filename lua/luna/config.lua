@@ -1,29 +1,15 @@
 local config = {}
 
 local defaults = {
-  -- Custom options will go here
-  -- theme = "luna",
-  -- -- and more will follow
-  -- custom_colors = {},
-  -- custom_highlights = {},
-  -- styles = {
-  --   comments = "NONE",
-  --   strings = "NONE",
-  --   keywords = "NONE",
-  --   functions = "NONE",
-  --   variables = "NONE",
-  --   diagnostics = "underline",
-  -- }
-  theme = nil, -- "dark" or "light". Alternatively, remove the option and set vim.o.background instead
-  borders = true, -- Split window borders
-  fade_nc = false, -- Fade non-current windows, making them more distinguishable
-  -- Style that is applied to various groups: see `highlight-args` for options
+  theme = nil,
+  borders = true,
+  fade_nc = false,
   styles = {
-    comments = "NONE",
-    strings = "NONE",
-    keywords = "NONE",
-    functions = "NONE",
-    variables = "NONE",
+    comments = "italic",
+    strings = "italic",
+    keywords = "bold",
+    functions = "italic",
+    variables = "bold",
     diagnostics = "underline",
   },
   disable = {

@@ -10,7 +10,6 @@ end
 
 function luna.load(exec_autocmd)
   local colors = require("luna.colors").load()
-
   utils.load(colors, exec_autocmd)
 end
 
