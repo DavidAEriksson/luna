@@ -8,7 +8,7 @@ M.load_cmp = function(colors)
   local cmp = {
     CmpItemAbbr = { fg = colors.fg },
     CmpItemAbbrDeprecated = { fg = colors.fg },
-    CmpItemAbbrMatch = { fg = colors.blue, style = "bold" },
+    CmpItemAbbrMatch = { fg = colors.blue, style = 'bold' },
     CmpItemAbbrMatchFuzzy = { fg = colors.blue, underline = true },
     CmpItemMenu = { fg = colors.light_gray },
 

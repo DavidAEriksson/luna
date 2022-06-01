@@ -89,17 +89,17 @@ M.load_ts = function(colors, config)
     -- Non-structured text. Like text in a markup language.
     TSText = { fg = colors.fg },
     -- Text to be represented in bold.
-    TSStrong = { fg = colors.purple, style = "bold" },
+    TSStrong = { fg = colors.purple, style = 'bold' },
     -- Text to be represented with emphasis.
-    TSEmphasis = { fg = colors.yellow, style = "italic" },
+    TSEmphasis = { fg = colors.yellow, style = 'italic' },
     -- Text to be represented with an underline.
-    TSUnderline = { style = "underline" },
+    TSUnderline = { style = 'underline' },
     -- Text that is part of a title.
-    TSTitle = { fg = colors.blue, style = "bold" },
+    TSTitle = { fg = colors.blue, style = 'bold' },
     -- Literal or verbatim text.
     TSLiteral = { fg = colors.green },
     -- URIs like hyperlinks or email addresses.
-    TSURI = { fg = colors.cyan, style = "underline" },
+    TSURI = { fg = colors.cyan, style = 'underline' },
     -- Math environments like LaTeX's `$ ... $`
     TSMath = { fg = colors.fg },
     -- Footnotes, text references, citations, etc.
@@ -109,11 +109,11 @@ M.load_ts = function(colors, config)
     -- Text/string indicating the type of text environment. Like the name of a `\begin` block in LaTeX.
     TSEnvironmentName = { fg = colors.fg },
     -- Text representation of an informational note.
-    TSNote = { fg = colors.info, style = "bold" },
+    TSNote = { fg = colors.info, style = 'bold' },
     -- Text representation of a warning note.
-    TSWarning = { fg = colors.warn, style = "bold" },
+    TSWarning = { fg = colors.warn, style = 'bold' },
     -- Text representation of a danger note.
-    TSDanger = { fg = colors.error, style = "bold" },
+    TSDanger = { fg = colors.error, style = 'bold' },
     -- Type (and class) definitions and annotations.
     TSType = { fg = colors.yellow },
     -- Built-in types: `i32` in Rust.
