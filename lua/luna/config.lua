@@ -5,12 +5,12 @@ local defaults = {
   borders = true,
   fade_nc = false,
   styles = {
-    comments = "italic",
-    strings = "italic",
-    keywords = "bold",
-    functions = "italic",
-    variables = "bold",
-    diagnostics = "underline",
+    comments = 'italic',
+    strings = 'italic',
+    keywords = 'bold',
+    functions = 'italic',
+    variables = 'bold',
+    diagnostics = 'underline',
   },
   disable = {
     background = false, -- Disable setting the background color
@@ -28,7 +28,7 @@ local defaults = {
 config.options = {}
 
 function config.set_options(opts)
-  config.options = vim.tbl_deep_extend("force", config.options, opts or {})
+  config.options = vim.tbl_deep_extend('force', config.options, opts or {})
 end
 
 config.set_options(defaults)

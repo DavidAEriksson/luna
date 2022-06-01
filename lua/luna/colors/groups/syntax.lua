@@ -7,7 +7,7 @@ local M = {}
 M.load_syn = function(colors, config)
   local syntax = {
     Type = { fg = colors.yellow },
-      -- static, register, volatile, etc.
+    -- static, register, volatile, etc.
     StorageClass = { fg = colors.purple },
     -- struct, union, enum, etc.
     Structure = { fg = colors.purple },
@@ -54,13 +54,13 @@ M.load_syn = function(colors, config)
     -- debugging statements
     Debug = { fg = colors.yellow },
     -- text that stands out, HTML links
-    Underlined = { fg = colors.green, style = "underline" },
+    Underlined = { fg = colors.green, style = 'underline' },
     -- left blank, hidden
-    Ignore = { fg = colors.cyan, bg = colors.bg, style = "bold" },
+    Ignore = { fg = colors.cyan, bg = colors.bg, style = 'bold' },
     -- any erroneous construct
-    Error = { fg = colors.error, bg = colors.none, style = "bold,underline" },
+    Error = { fg = colors.error, bg = colors.none, style = 'bold,underline' },
     -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
-    Todo = { fg = colors.yellow, bg = colors.none, style = "bold,italic" },
+    Todo = { fg = colors.yellow, bg = colors.none, style = 'bold,italic' },
     Comment = { fg = colors.light_gray, style = config.styles.comments }, -- normal comments
     -- normal if, then, else, endif, switch, etc.
     Conditional = { fg = colors.purple, style = config.styles.keywords },
@@ -75,21 +75,21 @@ M.load_syn = function(colors, config)
     -- any string
     String = { fg = colors.green, config.styles.strings },
 
-    htmlLink = { fg = colors.green, style = "underline" },
-    htmlH1 = { fg = colors.cyan, style = "bold" },
-    htmlH2 = { fg = colors.red, style = "bold" },
-    htmlH3 = { fg = colors.green, style = "bold" },
-    htmlH4 = { fg = colors.yellow, style = "bold" },
-    htmlH5 = { fg = colors.purple, style = "bold" },
+    htmlLink = { fg = colors.green, style = 'underline' },
+    htmlH1 = { fg = colors.cyan, style = 'bold' },
+    htmlH2 = { fg = colors.red, style = 'bold' },
+    htmlH3 = { fg = colors.green, style = 'bold' },
+    htmlH4 = { fg = colors.yellow, style = 'bold' },
+    htmlH5 = { fg = colors.purple, style = 'bold' },
 
     markdownBlockquote = { fg = colors.light_gray },
-    markdownBold = { fg = colors.purple, style = "bold" },
+    markdownBold = { fg = colors.purple, style = 'bold' },
     markdownCode = { fg = colors.green },
     markdownCodeBlock = { fg = colors.green },
     markdownCodeDelimiter = { fg = colors.green },
-    markdownH1 = { fg = colors.dark_blue, style = "bold" },
-    markdownH2 = { fg = colors.blue, style = "bold" },
-    markdownH3 = { fg = colors.cyan, style = "bold" },
+    markdownH1 = { fg = colors.dark_blue, style = 'bold' },
+    markdownH2 = { fg = colors.blue, style = 'bold' },
+    markdownH3 = { fg = colors.cyan, style = 'bold' },
     markdownH4 = { fg = colors.light_green },
     markdownH5 = { fg = colors.light_green },
     markdownH6 = { fg = colors.light_green },
@@ -103,12 +103,12 @@ M.load_syn = function(colors, config)
     markdownIdDeclaration = { fg = colors.purple },
     markdownIdDelimiter = { fg = colors.light_gray },
     markdownLinkDelimiter = { fg = colors.light_gray },
-    markdownItalic = { fg = colors.yellow, style = "italic" },
+    markdownItalic = { fg = colors.yellow, style = 'italic' },
     markdownLinkText = { fg = colors.purple },
     markdownListMarker = { fg = colors.red },
     markdownOrderedListMarker = { fg = colors.red },
     markdownRule = { fg = colors.purple },
-    markdownUrl = { fg = colors.cyan, style = "underline" },
+    markdownUrl = { fg = colors.cyan, style = 'underline' },
   }
   return syntax
 end
