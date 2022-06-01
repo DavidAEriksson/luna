@@ -9,4 +9,5 @@ vim.api.nvim_set_keymap('n', ',s', ':colorscheme onenord<CR>', {})
 
 local luna = require("luna")
 
+luna.setup({theme = "luna"})
 luna.load(false)
