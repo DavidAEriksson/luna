@@ -17,7 +17,7 @@ M.load_telescope = function(colors)
 
     TelescopePromptTitle = { fg = colors.telescope_prompt_title, bg = colors.orange },
     TelescopeResultsTitle = { fg = colors.telescope_results_title },
-    TelescopePreviewTitle = { fg = colors.telescope_preview_title, bg = colors.orange},
+    TelescopePreviewTitle = { fg = colors.telescope_preview_title, bg = colors.orange },
   }
   return telescope
 end
