@@ -23,7 +23,7 @@ M.load_nvim_tree = function(colors, config)
     NvimTreeImageFile = { fg = colors.purple, style = 'bold' },
     NvimTreeNormal = { fg = colors.fg, bg = colors.active },
     NvimTreeCursorLine = { bg = colors.float },
-    NvimTreeVertSplit = { fg = colors.float , bg = colors.float },
+    NvimTreeVertSplit = { fg = colors.float, bg = colors.float },
     LspDiagnosticsError = { fg = colors.error },
     LspDiagnosticsWarning = { fg = colors.warn },
     LspDiagnosticsInformation = { fg = colors.info },
