@@ -3,7 +3,6 @@ local M = {}
 -- @function load
 -- @desc Loads the highlight group for telescope highlights.
 -- @param color - The colors table.
--- @param config - The configuration table.
 M.load_telescope = function(colors)
   local telescope = {
     TelescopePromptPrefix = { bg = colors.telescope_prompt_prefix },
