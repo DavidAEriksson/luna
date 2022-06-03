@@ -12,7 +12,7 @@ M.load_nvim_tree = function(colors, config)
     NvimTreeFolderIcon = { fg = colors.dark_blue },
     NvimTreeEmptyFolderName = { fg = colors.light_gray },
     NvimTreeOpenedFolderName = { fg = colors.yellow, style = 'italic' },
-    NvimTreeIndentMarker = { fg = colors.blue },
+    NvimTreeIndentMarker = { fg = colors.light_gray },
     NvimTreeGitDirty = { fg = colors.yellow },
     NvimTreeGitNew = { fg = colors.diff_add },
     NvimTreeGitStaged = { fg = colors.purple },
