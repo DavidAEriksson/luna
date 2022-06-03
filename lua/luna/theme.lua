@@ -11,7 +11,9 @@ M.highlights = function(colors, config)
   local git = require('luna.colors.groups.git').load_git(colors)
   local bufferline = require('luna.colors.groups.bufferline').load_bufferline(colors)
   local telescope = require('luna.colors.groups.telescope').load_telescope(colors)
-  return vim.tbl_deep_extend('error', syntax, editor, treesitter, lsp, nvim_tree, cmp, git, bufferline, telescope)
+  local misc = require('luna.colors.groups.misc').load_misc(colors)
+
+  return vim.tbl_deep_extend('error', syntax, editor, treesitter, lsp, nvim_tree, cmp, git, bufferline, telescope, misc)
 end
 
 return M
