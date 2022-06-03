@@ -6,9 +6,9 @@ local M = {}
 -- @param config - The configuration table.
 M.load_ed = function(color, config)
   local editor = {
-    NormalFloat = { fg = color.fg, bg = color.active },
+    NormalFloat = { bg = color.float },
     -- floating window border
-    FloatBorder = { fg = color.blue, bg = color.active },
+    FloatBorder = { fg = color.float, bg = color.float },
     -- used for the columns set with 'colorcolumn'
     ColorColumn = { fg = color.none, bg = color.float },
     -- placeholder characters substituted for concealed text (see 'conceallevel')
