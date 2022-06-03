@@ -9,7 +9,7 @@ M.load_git = function(colors)
     GitSignsAdd = { fg = colors.diff_add },
     GitSignsAddNr = { fg = colors.diff_add },
     GitSignsAddLn = { fg = colors.diff_add },
-    GitSignsChange = { fg = colors.diff_change }, 
+    GitSignsChange = { fg = colors.diff_change },
     GitSignsChangeNr = { fg = colors.diff_change },
     GitSignsChangeLn = { fg = colors.diff_change },
     GitSignsDelete = { fg = colors.diff_remove },
@@ -27,8 +27,7 @@ M.load_git = function(colors)
     diffNewFile = { fg = colors.orange },
     diffFile = { fg = colors.blue },
     diffLine = { fg = colors.light_gray },
-    diffIndexLine = { fg = colors.purple }
-
+    diffIndexLine = { fg = colors.purple },
   }
   return git
 end
