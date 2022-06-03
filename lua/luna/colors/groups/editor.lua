@@ -34,7 +34,7 @@ M.load_ed = function(color, config)
     -- 'foldcolumn'
     FoldColumn = { fg = color.light_gray },
     -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
-    IncSearch = { fg = color.yellow, bg = color.selection, style = 'bold,underline' },
+    IncSearch = { fg = color.orange },
     -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     LineNr = { fg = color.light_gray },
     -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.

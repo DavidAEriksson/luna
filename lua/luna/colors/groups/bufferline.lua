@@ -6,8 +6,8 @@ local M = {}
 -- @param config - The configuration table.
 M.load_bufferline = function(colors)
   local bufferline = {
-    BufferLineIndicatorSelected = { fg = colors.yellow },
-    BufferLineFill = { bg = colors.bg },
+    BufferLineIndicatorSelected = { fg = colors.cyan, bg = colors.bg },
+    BufferLineFill = { fg = colors.bg, bg = colors.telescope_results_normal },
     BufferCurrent = { fg = colors.fg, bg = colors.bg },
     BufferCurrentIndex = { fg = colors.fg, bg = colors.bg },
     BufferCurrentMod = { fg = colors.yellow, bg = colors.bg, style = 'bold' },
