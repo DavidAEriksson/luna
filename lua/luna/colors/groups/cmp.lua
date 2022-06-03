@@ -11,7 +11,6 @@ M.load_cmp = function(colors)
     CmpItemAbbrMatch = { fg = colors.blue, style = 'bold' },
     CmpItemAbbrMatchFuzzy = { fg = colors.blue, underline = true },
     CmpItemMenu = { fg = colors.light_gray },
-
     CmpItemKindText = { fg = colors.orange },
     CmpItemKindMethod = { fg = colors.blue },
     CmpItemKindFunction = { fg = colors.blue },
