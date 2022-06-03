@@ -1,7 +1,7 @@
 local M = {}
 
 -- @function load
--- @desc Loads the highlight group for cmp highlights.
+-- @desc Loads the highlight group for bufferline highlights.
 -- @param color - The colors table.
 -- @param config - The configuration table.
 M.load_bufferline = function(colors)
