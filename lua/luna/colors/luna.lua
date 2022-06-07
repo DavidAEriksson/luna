@@ -1,22 +1,23 @@
+print()
+
 local colors = {
-  fg = '#F5C9C9',
-  fg_light = '#FCE3E3',
-  bg = '#1a1f27',
-  gray = '#425455',
-  light_gray = '#A2B6B5',
-  cyan = '#82D2DB',
-  blue = '#578EC5',
-  dark_blue = '#41648E',
-  green = '#8CBEA9',
+  fg = '#F1F0FA',
+  bg = '#272A33',
+  gray = '#A2A2A9',
+  light_gray = '#4B4B59',
+  cyan = '#7DEFFF',
+  blue = '#81BBF0',
+  dark_blue = '#7698B3',
+  green = '#7FD1B9',
   light_green = '#73DDC2',
-  dark_red = '#BC223E',
+  dark_red = '#E62E4F',
   red = '#F4616F',
   light_red = '#FCB0B7',
-  pink = '#FBBFCA',
+  pink = '#D09E83',
   dark_pink = '#F89898',
-  orange = '#ED8553',
+  orange = '#FFA36F',
   yellow = '#F6DD9C',
-  purple = '#CD64BA',
+  purple = '#C398F9',
   light_purple = '#C58ABA',
   none = 'NONE',
 }
@@ -27,17 +28,33 @@ colors.info = colors.green
 colors.hint = colors.purple
 
 colors.diff_add = colors.green
-colors.diff_add_bg = '#394E3D'
-colors.diff_change = colors.dark_blue
-colors.diff_change_bg = '#39495D'
+colors.diff_add_bg = colors.bg
+colors.diff_change = colors.orange
+colors.diff_change_bg = colors.bg
 colors.diff_remove = colors.red
 colors.diff_remove_bg = '#4D2B2E'
 colors.diff_text_bg = '#405D7E'
 
-colors.active = '#353B49'
-colors.float = '#3B4252'
-colors.highlight = '#3F4758'
-colors.highlight_dark = '#434C5E'
-colors.selection = '#4C566A'
+colors.active = '#21232A'
+colors.float = '#21232A' -- Floating window like initial CMP window
+colors.highlight = '#333640' -- Highlighted line in visual mode
+colors.highlight_dark = '#2A2C34'
+colors.selection = '#2D3236'
+
+-- Telescope prompt colors
+colors.telescope_prompt_prefix = "#303441"
+colors.telescope_prompt_normal = "#303441"
+colors.telescope_prompt_border = "#303441"
+colors.telescope_prompt_title  = "#303441"
+
+-- Telescop results colors
+colors.telescope_results_normal = "#24262E"
+colors.telescope_results_border = "#24262E"
+colors.telescope_results_title = "#24262E"
+
+-- Telescop preview colors
+colors.telescope_preview_normal = "#21232A"
+colors.telescope_preview_border = "#21232A"
+colors.telescope_preview_title = "#21232A"
 
 return colors

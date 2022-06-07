@@ -48,7 +48,7 @@ M.load_ed = function(color, config)
     -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist
     -- in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
     -- See also |hl-EndOfBuffer|.
-    NonText = { fg = color.gray },
+    NonText = { fg = color.bg },
     -- normal item |hl-Pmenu|
     Pmenu = { fg = color.fg, bg = color.float },
     -- selected item |hl-PmenuSel|
@@ -141,10 +141,16 @@ M.load_ed = function(color, config)
     SignColumn = { fg = color.fg, bg = color.none },
 
     -- the column separating vertically split windows
-    VertSplit = { fg = color.bg },
+    VertSplit = { fg = color.selection },
 
-    EndOfBuffer = { fg = color.gray },
+    EndOfBuffer = { fg = color.bg },
   }
+
+  if config.fade_nc then
+      editor.NormalNC["bg"] = color.active
+      editor.NormalFloat["bg"] = color.bg
+      editor.FloatBorder["bg"] = color.bg
+  end
 
   -- Options:
 

@@ -8,6 +8,7 @@ M.load_bufferline = function(colors)
   local bufferline = {
     BufferLineIndicatorSelected = { fg = colors.cyan, bg = colors.bg },
     BufferLineFill = { fg = colors.bg, bg = colors.active },
+    BufferLineTabSelected = { fg = colors.cyan, bg = colors.bg, style = "bold" },
     BufferCurrent = { fg = colors.fg, bg = colors.bg },
     BufferCurrentIndex = { fg = colors.fg, bg = colors.bg },
     BufferCurrentMod = { fg = colors.yellow, bg = colors.bg, style = 'bold' },
