@@ -1,6 +1,7 @@
 package.loaded['luna'] = nil
 package.loaded['luna.utils'] = nil
 package.loaded['luna.colors'] = nil
+package.loaded['luna.colors.group'] = nil
 package.loaded['luna.colors.luna'] = nil
 package.loaded['luna.theme'] = nil
 
