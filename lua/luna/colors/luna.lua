@@ -42,19 +42,19 @@ colors.highlight_dark = '#2A2C34'
 colors.selection = '#2D3236'
 
 -- Telescope prompt colors
-colors.telescope_prompt_prefix = "#303441"
-colors.telescope_prompt_normal = "#303441"
-colors.telescope_prompt_border = "#303441"
-colors.telescope_prompt_title  = "#303441"
+colors.telescope_prompt_prefix = '#303441'
+colors.telescope_prompt_normal = '#303441'
+colors.telescope_prompt_border = '#303441'
+colors.telescope_prompt_title = '#303441'
 
 -- Telescop results colors
-colors.telescope_results_normal = "#24262E"
-colors.telescope_results_border = "#24262E"
-colors.telescope_results_title = "#24262E"
+colors.telescope_results_normal = '#24262E'
+colors.telescope_results_border = '#24262E'
+colors.telescope_results_title = '#24262E'
 
 -- Telescop preview colors
-colors.telescope_preview_normal = "#21232A"
-colors.telescope_preview_border = "#21232A"
-colors.telescope_preview_title = "#21232A"
+colors.telescope_preview_normal = '#21232A'
+colors.telescope_preview_border = '#21232A'
+colors.telescope_preview_title = '#21232A'
 
 return colors

@@ -147,9 +147,9 @@ M.load_ed = function(color, config)
   }
 
   if config.fade_nc then
-      editor.NormalNC["bg"] = color.active
-      editor.NormalFloat["bg"] = color.bg
-      editor.FloatBorder["bg"] = color.bg
+    editor.NormalNC['bg'] = color.active
+    editor.NormalFloat['bg'] = color.bg
+    editor.FloatBorder['bg'] = color.bg
   end
 
   -- Options:
