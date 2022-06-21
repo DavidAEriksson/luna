@@ -38,7 +38,9 @@ M.load_ed = function(color, config)
     -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     LineNr = { fg = color.light_gray },
     -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
-    CursorLineNr = { fg = color.fg },
+    CursorLineNr = { fg = color.fg, bg = color.active },
+    -- Like SignColumn when 'cursorline' is set for the cursor line.
+    CursorLineSign = { bg = color.active },
     -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     MatchParen = { fg = color.yellow, bg = color.none, style = 'bold' },
     -- 'showmode' message (e.g., "-- INSERT -- ")

@@ -34,7 +34,6 @@ M.load = function(colors, exec_autocmd)
   -- Load highlights
   colors = vim.tbl_deep_extend('force', colors, config.custom_colors)
   local base_highlights = theme.highlights(colors, config)
-
   local highlights = vim.tbl_deep_extend('force', base_highlights, config.custom_highlights)
 
   for group, color in pairs(highlights) do

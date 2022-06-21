@@ -1,5 +1,3 @@
-print()
-
 local colors = {
   fg = '#F1F0FA',
   bg = '#272A33',
@@ -47,12 +45,12 @@ colors.telescope_prompt_normal = '#303441'
 colors.telescope_prompt_border = '#303441'
 colors.telescope_prompt_title = '#303441'
 
--- Telescop results colors
+-- Telescope results colors
 colors.telescope_results_normal = '#24262E'
 colors.telescope_results_border = '#24262E'
 colors.telescope_results_title = '#24262E'
 
--- Telescop preview colors
+-- Telescope preview colors
 colors.telescope_preview_normal = '#21232A'
 colors.telescope_preview_border = '#21232A'
 colors.telescope_preview_title = '#21232A'
