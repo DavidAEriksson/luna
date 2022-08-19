@@ -8,5 +8,5 @@ vim.api.nvim_set_keymap('n', ',r', ':luafile dev/luna.lua<CR>', {})
 vim.api.nvim_set_keymap('n', ',s', ':colorscheme rose-pine<CR>', {})
 
 local luna = require('luna2')
-luna.setup({ theme = 'luna'})
+luna.setup({ theme = 'luna' })
 luna.load()

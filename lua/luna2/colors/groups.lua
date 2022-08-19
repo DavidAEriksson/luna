@@ -77,7 +77,13 @@ M.load_groups = function(colors, config)
     SpellLocal = { fg = colors.blue.triton, bg = colors.none, italic = true, underline = true, sp = colors.blue.triton },
     -- Word that is recognized by the spellchecker as one that is hardly ever used.
     -- |spell| Combined with the highlighting used otherwise.
-    SpellRare = { fg = colors.purple.nebula, bg = colors.none, italic = true, underline = true, sp = colors.purple.nebula },
+    SpellRare = {
+      fg = colors.purple.nebula,
+      bg = colors.none,
+      italic = true,
+      underline = true,
+      sp = colors.purple.nebula,
+    },
     -- status line of current window
     StatusLine = { fg = colors.fg, bg = colors.gray.gloom },
     -- status lines of not-current windows Note: if this is equal to "StatusLine"
@@ -139,7 +145,6 @@ M.load_groups = function(colors, config)
     VertSplit = { fg = colors.gray.dust },
     EndOfBuffer = { fg = colors.gray.void },
 
-
     -- ####### Luna Treesitter Groups ###### --
 
     TSAttribute = { fg = colors.purple.nebula },
@@ -150,7 +155,7 @@ M.load_groups = function(colors, config)
     -- -- Line comments and block comments.
     TSComment = { fg = colors.gray.smoke }, -- TODO: text styling
     -- -- Keywords related to conditionals: `if`, `when`, `cond`, etc.
-    TSConditional = { fg = colors.blue.tidal, }, -- TODO: text styling
+    TSConditional = { fg = colors.blue.tidal }, -- TODO: text styling
     -- -- Constants identifiers. These might not be semantically constant. E.g. uppercase variables in Python.
     TSConstant = { fg = colors.blue.triton },
     -- -- Built-in constant values: `nil` in Lua.
@@ -171,7 +176,7 @@ M.load_groups = function(colors, config)
     -- -- Function calls and definitions.
     TSFunction = { fg = colors.blue.tidal }, -- TODO: text styling
     -- -- Built-in functions: `print` in Lua.
-    TSFuncBuiltin = { fg = colors.purple.nebula },-- TODO: text styling
+    TSFuncBuiltin = { fg = colors.purple.nebula }, -- TODO: text styling
     -- -- Macro defined functions (calls and definitions): each `macro_rules` in Rust.
     TSFuncMacro = { fg = colors.blue.neptune },
     -- -- File or module inclusion keywords: `#include` in C, `use` or `extern crate` in Rust.
@@ -209,7 +214,7 @@ M.load_groups = function(colors, config)
     -- -- Keywords related to loops: `for`, `while`, etc.
     TSRepeat = { fg = colors.purple.nebula }, -- TODO: text styling
     -- -- String literals.
-    TSString = { fg = colors.green.terra },-- TODO: text styling
+    TSString = { fg = colors.green.terra }, -- TODO: text styling
     -- -- Regular expression literals.
     TSStringRegex = { fg = colors.yellow.titan },
     -- -- Escape characters within a string: `\n`, `\t`, etc.
@@ -231,7 +236,7 @@ M.load_groups = function(colors, config)
     -- -- Text to be represented with an underline.
     TSUnderline = { underline = true, italic = true },
     -- -- Text that is part of a title.
-    TSTitle = { fg = colors.white.smoke, bold  = true},
+    TSTitle = { fg = colors.white.smoke, bold = true },
     -- -- Literal or verbatim text.
     TSLiteral = { fg = colors.green.terra, italic = true },
     -- -- URIs like hyperlinks or email addresses.
@@ -257,7 +262,7 @@ M.load_groups = function(colors, config)
     -- -- Variable names that don't fit into other categories.
     TSVariable = { fg = colors.white.smoke },
     -- -- Variable names defined by the language: `this` or `self` in Javascript.
-    TSVariableBuiltin = { fg = colors.red.deimos, },
+    TSVariableBuiltin = { fg = colors.red.deimos },
     -- ####### Luna Syntax Groups ####### --
     -- Types
     Type = { fg = colors.yellow.rhea },
@@ -274,7 +279,7 @@ M.load_groups = function(colors, config)
     -- -- a boolean constant: TRUE, false
     Boolean = { fg = colors.yellow.titan },
     -- -- a floating point constant: 2.3e10
-    Float = { fg = colors.yellow.rhea},
+    Float = { fg = colors.yellow.rhea },
     -- -- any statement
     Statement = { fg = colors.purple.nebula },
     -- -- case, default, etc.
@@ -308,25 +313,48 @@ M.load_groups = function(colors, config)
     -- debugging statements
     Debug = { fg = colors.yellow.rhea },
     -- text that stands out, HTML links
-    Underlined = { fg = colors.green.terra, --[[ style = 'underline' ]] },
+    Underlined = {
+      fg = colors.green.terra, --[[ style = 'underline' ]]
+    },
     -- left blank, hidden
-    Ignore = { fg = colors.blue.neptune, bg = colors.gray.void, --[[ style = 'bold' ]] },
+    Ignore = {
+      fg = colors.blue.neptune,
+      bg = colors.gray.void, --[[ style = 'bold' ]]
+    },
     -- any erroneous construct
-    Error = { fg = colors.red.phobos, bg = colors.none, --[[ style = 'bold,underline' ]] },
+    Error = {
+      fg = colors.red.phobos,
+      bg = colors.none, --[[ style = 'bold,underline' ]]
+    },
     -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
-    Todo = { fg = colors.yellow.rhea, bg = colors.none, --[[ style = 'bold,italic' ]] },
+    Todo = {
+      fg = colors.yellow.rhea,
+      bg = colors.none, --[[ style = 'bold,italic' ]]
+    },
     -- normal comments
-    Comment = { fg = colors.gray.dust, --[[ style = config.styles.comments ]] },
+    Comment = {
+      fg = colors.gray.dust, --[[ style = config.styles.comments ]]
+    },
     -- normal if, then, else, endif, switch, etc.
-    Conditional = { fg = colors.blue.neptune, --[[ style = config.styles.keywords ]] },
+    Conditional = {
+      fg = colors.blue.neptune, --[[ style = config.styles.keywords ]]
+    },
     -- normal for, do, while, etc.
-    Keyword = { fg = colors.blue.neptune, --[[ style = config.styles.keywords ]] },
+    Keyword = {
+      fg = colors.blue.neptune, --[[ style = config.styles.keywords ]]
+    },
     -- normal any other keyword
-    Repeat = { fg = colors.blue.neptune, --[[ style = config.styles.keywords ]] },
+    Repeat = {
+      fg = colors.blue.neptune, --[[ style = config.styles.keywords ]]
+    },
     -- normal function names
-    Function = { fg = colors.blue.neptune, --[[ style = config.styles.functions ]] },
+    Function = {
+      fg = colors.blue.neptune, --[[ style = config.styles.functions ]]
+    },
     -- any variable name
-    Identifier = { fg = colors.white.smoke, --[[ style = config.styles.variables ]] },
+    Identifier = {
+      fg = colors.white.smoke, --[[ style = config.styles.variables ]]
+    },
     -- any string
     String = { fg = colors.green.terra },
 
@@ -367,17 +395,17 @@ M.load_groups = function(colors, config)
     -- ####### Luna Telescope Groups ###### --
 
     TelescopePromptPrefix = { bg = colors.gray.deep },
-    TelescopePromptTitle = { fg = colors.gray.deep , bg = colors.yellow.titan },
+    TelescopePromptTitle = { fg = colors.gray.deep, bg = colors.yellow.titan },
     TelescopePromptNormal = { bg = colors.gray.deep },
-    TelescopePromptBorder = { bg = colors.gray.deep , fg = colors.gray.deep },
+    TelescopePromptBorder = { bg = colors.gray.deep, fg = colors.gray.deep },
 
     TelescopeResultsTitle = { fg = colors.gray.gloom },
-    TelescopeResultsNormal = { bg = colors.gray.gloom},
+    TelescopeResultsNormal = { bg = colors.gray.gloom },
     TelescopeResultsBorder = { bg = colors.gray.gloom, fg = colors.gray.gloom },
 
-    TelescopePreviewTitle = { fg = colors.gray.dark , bg = colors.yellow.titan },
+    TelescopePreviewTitle = { fg = colors.gray.dark, bg = colors.yellow.titan },
     TelescopePreviewNormal = { bg = colors.gray.dark },
-    TelescopePreviewBorder = { bg = colors.gray.dark , fg = colors.gray.dark },
+    TelescopePreviewBorder = { bg = colors.gray.dark, fg = colors.gray.dark },
 
     TelescopeMatching = { fg = colors.yellow.titan },
     TelescopeSelectionCaret = { fg = colors.blue.triton },
@@ -386,7 +414,7 @@ M.load_groups = function(colors, config)
     -- ###### Luna Bufferline Groups ####### --
     BufferLineIndicatorSelected = { fg = colors.red.deimos, bg = colors.red.deimos },
     BufferLineFill = { fg = colors.gray.void, bg = colors.gray.deep },
-    BufferLineTabSelected = { fg = colors.red.deimos, bg = colors.gray.void, bold = true, italic = true},
+    BufferLineTabSelected = { fg = colors.red.deimos, bg = colors.gray.void, bold = true, italic = true },
     BufferCurrent = { fg = colors.white.smoke, bg = colors.gray.void },
     BufferCurrentIndex = { fg = colors.white.smoke, bg = colors.gray.void },
     BufferCurrentMod = { fg = colors.yellow.rhea, bg = colors.gray.void, bold = true },

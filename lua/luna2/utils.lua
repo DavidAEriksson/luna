@@ -5,7 +5,7 @@ local M = {}
 M.load = function(colors)
   local config = require('luna2.config')
   vim.o.termguicolors = true
-  vim.g.colors_name = "luna"
+  vim.g.colors_name = 'luna'
 
   -- Make sure we use overrides from config in case of duplicate
   colors = vim.tbl_deep_extend('force', colors, config.options.custom_colors)

@@ -1,7 +1,7 @@
 local config = {}
 
 local defaults = {
-  custom_colors = {}
+  custom_colors = {},
 }
 
 config.options = {}

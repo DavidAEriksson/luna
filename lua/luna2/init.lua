@@ -9,8 +9,8 @@ function M.setup(options)
 end
 
 function M.load()
-local colors = require('luna2.colors').load()
-utils.load(colors)
+  local colors = require('luna2.colors').load()
+  utils.load(colors)
 end
 
 return M
