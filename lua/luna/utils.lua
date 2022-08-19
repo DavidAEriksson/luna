@@ -1,9 +1,9 @@
-local groups = require('luna2.colors.groups')
+local groups = require('luna.colors.groups')
 
 local M = {}
 
 M.load = function(colors)
-  local config = require('luna2.config')
+  local config = require('luna.config')
   vim.o.termguicolors = true
   vim.g.colors_name = 'luna'
 

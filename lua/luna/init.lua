@@ -1,5 +1,5 @@
-local utils = require('luna2.utils')
-local config = require('luna2.config')
+local utils = require('luna.utils')
+local config = require('luna.config')
 
 local M = {}
 
@@ -9,7 +9,7 @@ function M.setup(options)
 end
 
 function M.load()
-  local colors = require('luna2.colors').load()
+  local colors = require('luna.colors').load()
   utils.load(colors)
 end
 

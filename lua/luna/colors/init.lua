@@ -1,9 +1,9 @@
 local M = {}
 
-local luna = require('luna2.colors.luna')
+local luna = require('luna.colors.luna')
 
 M.load = function()
-  local theme = require('luna2.config').options.theme
+  local theme = require('luna.config').options.theme
   if not theme then
     theme = vim.o.background
   end
