@@ -7,59 +7,59 @@ M.load_groups = function(colors, config)
     Normal = { fg = colors.white.smoke, bg = colors.gray.void },
     -- Floating windows
     NormalFloat = { bg = colors.gray.gloom },
-    -- -- floating window border
+    -- floating window border
     FloatBorder = { fg = colors.gray.gloom, bg = colors.gray.gloom },
-    -- -- used for the columns set with 'colorscolumn'
+    -- used for the columns set with 'colorscolumn'
     ColorColumn = { fg = colors.none, bg = colors.gray.gloom },
-    -- -- placeholder characters substituted for concealed text (see 'conceallevel')
+    -- placeholder characters substituted for concealed text (see 'conceallevel')
     Conceal = { bg = colors.void },
-    -- -- the character under the cursor
+    -- the character under the cursor
     Cursor = { fg = colors.red.phobos, bg = colors.none },
-    -- -- directory names (and other special names in listings)
+    -- directory names (and other special names in listings)
     Directory = { fg = colors.blue.neptune, bg = colors.none },
-    -- -- diff mode: Added line
+    -- diff mode: Added line
     DiffAdd = { fg = colors.none, bg = colors.gray.void },
-    -- -- diff mode: Changed line
+    -- diff mode: Changed line
     DiffChange = { fg = colors.none, bg = colors.gray.void },
-    -- -- diff mode: Deleted line
+    -- diff mode: Deleted line
     DiffDelete = { fg = colors.none, bg = colors.red.phobos },
-    -- -- diff mode: Changed text within a changed line
+    -- diff mode: Changed text within a changed line
     DiffText = { fg = colors.none, bg = colors.blue.neptune },
-    -- -- error messages
+    -- error messages
     ErrorMsg = { fg = colors.red.phobos },
-    -- -- line used for closed folds
+    -- line used for closed folds
     Folded = { fg = colors.gray.dust, bg = colors.none }, -- TODO: text styling
-    -- -- 'foldcolumn'
+    -- 'foldcolumn'
     FoldColumn = { fg = colors.gray.dust },
-    -- -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+    -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     IncSearch = { fg = colors.gray.void, bg = colors.yellow.titan },
-    -- -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+    -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     LineNr = { fg = colors.gray.dust },
-    -- -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+    -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     CursorLineNr = { fg = colors.white.smoke, bg = colors.gray.void },
-    -- -- Like SignColumn when 'cursorline' is set for the cursor line.
+    -- Like SignColumn when 'cursorline' is set for the cursor line.
     CursorLineSign = { bg = colors.gray.dark },
-    -- -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+    -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     MatchParen = { fg = colors.red.deimos, bg = colors.none, italic = true },
-    -- -- 'showmode' message (e.g., "-- INSERT -- ")
+    -- 'showmode' message (e.g., "-- INSERT -- ")
     ModeMsg = { fg = colors.purple.nebula, bold = true },
-    -- -- |more-prompt|
+    -- |more-prompt|
     MoreMsg = { fg = colors.purple.nebula, bold = true },
-    -- -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist
-    -- -- in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
-    -- -- See also |hl-EndOfBuffer|.
-    NonText = { fg = colors.gray.void },
-    -- -- normal item |hl-Pmenu|
+    -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist
+    -- in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
+    -- See also |hl-EndOfBuffer|.
+    NonText = { fg = colors.gray.smoke },
+    -- normal item |hl-Pmenu|
     Pmenu = { fg = colors.white.smoke, bg = colors.gray.deep },
-    -- -- selected item |hl-PmenuSel|
+    -- selected item |hl-PmenuSel|
     PmenuSel = { bg = colors.red.deimos },
-    -- -- scrollbar |hl-PmenuSbar|
+    -- scrollbar |hl-PmenuSbar|
     PmenuSbar = { bg = colors.gray.gloom },
-    -- -- thumb of the scrollbar  |hl-PmenuThumb|
+    -- thumb of the scrollbar  |hl-PmenuThumb|
     PmenuThumb = { bg = colors.red.deimos },
-    -- -- |hit-enter| prompt and yes/no questions
+    -- |hit-enter| prompt and yes/no questions
     Question = { fg = colors.green.terra },
-    -- -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
+    -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
     QuickFixLine = { bg = colors.float, bold = true, italic = true },
     -- Line numbers for quickfix lists
     qfLineNr = { fg = colors.purple.nebula },
@@ -148,141 +148,141 @@ M.load_groups = function(colors, config)
     -- ####### Luna Treesitter Groups ###### --
 
     TSAttribute = { fg = colors.purple.nebula },
-    -- -- Boolean literals: `True` and `False` in Python.
+    -- Boolean literals: `True` and `False` in Python.
     TSBoolean = { fg = colors.yellow.titan },
-    -- -- Character literals: `'a'` in C.
+    -- Character literals: `'a'` in C.
     TSCharacter = { fg = colors.green.terra },
-    -- -- Line comments and block comments.
-    TSComment = { fg = colors.gray.smoke }, -- TODO: text styling
-    -- -- Keywords related to conditionals: `if`, `when`, `cond`, etc.
-    TSConditional = { fg = colors.blue.tidal }, -- TODO: text styling
-    -- -- Constants identifiers. These might not be semantically constant. E.g. uppercase variables in Python.
+    -- Line comments and block comments.
+    TSComment = { fg = colors.gray.smoke, italic = true }, -- TODO: text styling
+    -- Keywords related to conditionals: `if`, `when`, `cond`, etc.
+    TSConditional = { fg = colors.blue.tidal, italic = true, bold = true }, -- TODO: text styling
+    -- Constants identifiers. These might not be semantically constant. E.g. uppercase variables in Python.
     TSConstant = { fg = colors.blue.triton },
-    -- -- Built-in constant values: `nil` in Lua.
+    -- Built-in constant values: `nil` in Lua.
     TSConstBuiltin = { fg = colors.yellow.titan },
-    -- -- Constants defined by macros: `NULL` in C.
+    -- Constants defined by macros: `NULL` in C.
     TSConstMacro = { fg = colors.red.phobos },
-    -- -- Constructor calls and definitions: `{}` in Lua, and Java constructors.
+    -- Constructor calls and definitions: `{}` in Lua, and Java constructors.
     TSConstructor = { fg = colors.gray.dust },
-    -- -- Syntax/parser errors. This might highlight large sections of code while the user is typing
-    -- -- still incomplete code, use a sensible highlight.
+    -- Syntax/parser errors. This might highlight large sections of code while the user is typing
+    -- still incomplete code, use a sensible highlight.
     TSError = { fg = colors.red.phobos },
-    -- -- Exception related keywords: `try`, `except`, `finally` in Python.
+    -- Exception related keywords: `try`, `except`, `finally` in Python.
     TSException = { fg = colors.purple.nebula },
-    -- -- Object and struct fields.
-    TSField = { fg = colors.blue.tidal },
-    -- -- Floating-point number literals.
+    -- Object and struct fields.
+    TSField = { fg = colors.blue.tidal, italic = true },
+    -- Floating-point number literals.
     TSFloat = { fg = colors.yellow.rhea },
-    -- -- Function calls and definitions.
-    TSFunction = { fg = colors.blue.tidal }, -- TODO: text styling
-    -- -- Built-in functions: `print` in Lua.
-    TSFuncBuiltin = { fg = colors.purple.nebula }, -- TODO: text styling
-    -- -- Macro defined functions (calls and definitions): each `macro_rules` in Rust.
+    -- Function calls and definitions.
+    TSFunction = { fg = colors.blue.tidal, italic = true },
+    -- Built-in functions: `print` in Lua.
+    TSFuncBuiltin = { fg = colors.purple.nebula, italic = true },
+    -- Macro defined functions (calls and definitions): each `macro_rules` in Rust.
     TSFuncMacro = { fg = colors.blue.neptune },
-    -- -- File or module inclusion keywords: `#include` in C, `use` or `extern crate` in Rust.
+    -- File or module inclusion keywords: `#include` in C, `use` or `extern crate` in Rust.
     TSInclude = { fg = colors.blue.neptune },
-    -- -- Keywords that don't fit into other categories.
-    TSKeyword = { fg = colors.purple.nebula }, -- TODO: text styling
-    -- -- Keywords used to define a function: `function` in Lua, `def` and `lambda` in Python.
-    TSKeywordFunction = { fg = colors.red.deimos }, -- TODO: text styling
-    -- -- Unary and binary operators that are English words: `and`, `or` in Python; `sizeof` in C.
+    -- Keywords that don't fit into other categories.
+    TSKeyword = { fg = colors.purple.nebula, italic = true },
+    -- Keywords used to define a function: `function` in Lua, `def` and `lambda` in Python.
+    TSKeywordFunction = { fg = colors.red.deimos, italic = true }, -- TODO: text styling
+    -- Unary and binary operators that are English words: `and`, `or` in Python; `sizeof` in C.
     TSKeywordOperator = { fg = colors.red.deimos },
-    -- -- Keywords like `return` and `yield`.
+    -- Keywords like `return` and `yield`.
     TSKeywordReturn = { fg = colors.red.deimos },
-    -- -- GOTO labels: `label:` in C, and `::label::` in Lua.
+    -- GOTO labels: `label:` in C, and `::label::` in Lua.
     TSLabel = { fg = colors.red.deimos },
-    -- -- Method calls and definitions.
-    TSMethod = { fg = colors.blue.neptune }, -- TODO: text styling
-    -- -- Identifiers referring to modules and namespaces.
+    -- Method calls and definitions.
+    TSMethod = { fg = colors.blue.neptune, italic = true, bold = true }, -- TODO: text styling
+    -- Identifiers referring to modules and namespaces.
     TSNamespace = { fg = colors.yellow.rhea },
-    -- -- Numeric literals that don't fit into other categories.
+    -- Numeric literals that don't fit into other categories.
     TSNumber = { fg = colors.yellow.rhea },
-    -- -- Binary or unary operators: `+`, and also `->` and `*` in C.
+    -- Binary or unary operators: `+`, and also `->` and `*` in C.
     TSOperator = { fg = colors.red.deimos },
-    -- -- Parameters of a function.
+    -- Parameters of a function.
     TSParameter = { fg = colors.blue.tidal },
-    -- -- References to parameters of a function.
+    -- References to parameters of a function.
     TSParameterReference = { fg = colors.blue.tidal },
-    -- -- Same as `TSField`.
+    -- Same as `TSField`.
     TSProperty = { fg = colors.blue.tidal },
-    -- -- Punctuation delimiters: Periods, commas, semicolons, etc.
+    -- Punctuation delimiters: Periods, commas, semicolons, etc.
     TSPunctDelimiter = { fg = colors.gray.dust },
-    -- -- Brackets, braces, parentheses, etc.
+    -- Brackets, braces, parentheses, etc.
     TSPunctBracket = { fg = colors.yellow.rhea },
-    -- -- Special punctuation that doesn't fit into the previous categories.
+    -- Special punctuation that doesn't fit into the previous categories.
     TSPunctSpecial = { fg = colors.gray.dust },
-    -- -- Keywords related to loops: `for`, `while`, etc.
-    TSRepeat = { fg = colors.purple.nebula }, -- TODO: text styling
-    -- -- String literals.
-    TSString = { fg = colors.green.terra }, -- TODO: text styling
-    -- -- Regular expression literals.
+    -- Keywords related to loops: `for`, `while`, etc.
+    TSRepeat = { fg = colors.purple.nebula, italic = true, bold = true },
+    -- String literals.
+    TSString = { fg = colors.green.terra, italic = true },
+    -- Regular expression literals.
     TSStringRegex = { fg = colors.yellow.titan },
-    -- -- Escape characters within a string: `\n`, `\t`, etc.
+    -- Escape characters within a string: `\n`, `\t`, etc.
     TSStringEscape = { fg = colors.red.deimos },
-    -- -- Identifiers referring to symbols or atoms.
+    -- Identifiers referring to symbols or atoms.
     TSSymbol = { fg = colors.purple.nebula },
-    -- -- Tags like HTML tag names.
+    -- Tags like HTML tag names.
     TSTag = { fg = colors.yellow.rhea },
-    -- -- HTML tag attributes.
+    -- HTML tag attributes.
     TSTagAttribute = { fg = colors.blue.tidal },
-    -- -- Tag delimiters like `<` `>` `/`.
+    -- Tag delimiters like `<` `>` `/`.
     TSTagDelimiter = { fg = colors.gray.dust },
-    -- -- Non-structured text. Like text in a markup language.
+    -- Non-structured text. Like text in a markup language.
     TSText = { fg = colors.white.smoke },
-    -- -- Text to be represented in bold.
+    -- Text to be represented in bold.
     TSStrong = { fg = colors.purple.nebula, bold = true },
-    -- -- Text to be represented with emphasis.
+    -- Text to be represented with emphasis.
     TSEmphasis = { fg = colors.yellow.rhea, italic = true },
-    -- -- Text to be represented with an underline.
+    -- Text to be represented with an underline.
     TSUnderline = { underline = true, italic = true },
-    -- -- Text that is part of a title.
+    -- Text that is part of a title.
     TSTitle = { fg = colors.white.smoke, bold = true },
-    -- -- Literal or verbatim text.
+    -- Literal or verbatim text.
     TSLiteral = { fg = colors.green.terra, italic = true },
-    -- -- URIs like hyperlinks or email addresses.
+    -- URIs like hyperlinks or email addresses.
     TSURI = { fg = colors.blue.triton, underline = true, italic = true },
-    -- -- Math environments like LaTeX's `$ ... $`
+    -- Math environments like LaTeX's `$ ... $`
     TSMath = { fg = colors.white.smoke },
-    -- -- Footnotes, text references, citations, etc.
+    -- Footnotes, text references, citations, etc.
     TSTextReference = { fg = colors.purple.nebula },
-    -- -- Text environments of markup languages.
+    -- Text environments of markup languages.
     TSEnvironment = { fg = colors.white.smoke },
-    -- -- Text/string indicating the type of text environment. Like the name of a `\begin` block in LaTeX.
+    -- Text/string indicating the type of text environment. Like the name of a `\begin` block in LaTeX.
     TSEnvironmentName = { fg = colors.white.smoke },
-    -- -- Text representation of an informational note.
+    -- Text representation of an informational note.
     TSNote = { fg = colors.green.terra, bold = true },
-    -- -- Text representation of a warning note.
+    -- Text representation of a warning note.
     TSWarning = { fg = colors.yellow.titan, bold = true },
-    -- -- Text representation of a danger note.
+    -- Text representation of a danger note.
     TSDanger = { fg = colors.red.phobos, bold = true },
-    -- -- Type (and class) definitions and annotations.
+    -- Type (and class) definitions and annotations.
     TSType = { fg = colors.yellow.rhea },
-    -- -- Built-in types: `i32` in Rust.
+    -- Built-in types: `i32` in Rust.
     TSTypeBuiltin = { fg = colors.red.deimos },
-    -- -- Variable names that don't fit into other categories.
+    -- Variable names that don't fit into other categories.
     TSVariable = { fg = colors.white.smoke },
-    -- -- Variable names defined by the language: `this` or `self` in Javascript.
+    -- Variable names defined by the language: `this` or `self` in Javascript.
     TSVariableBuiltin = { fg = colors.red.deimos },
     -- ####### Luna Syntax Groups ####### --
     -- Types
     Type = { fg = colors.yellow.rhea },
     -- static, register, volatile, etc.
     StorageClass = { fg = colors.purple.nebula },
-    -- -- struct, union, enum, etc.
+    -- struct, union, enum, etc.
     Structure = { fg = colors.purple.nebula },
-    -- -- any constant
+    -- any constant
     Constant = { fg = colors.blue.triton },
-    -- -- any character constant: 'c', '\,'
+    -- any character constant: 'c', '\,'
     Character = { fg = colors.green.terra },
-    -- -- a number constant: 5
+    -- a number constant: 5
     Number = { fg = colors.yellow.rhea },
-    -- -- a boolean constant: TRUE, false
+    -- a boolean constant: TRUE, false
     Boolean = { fg = colors.yellow.titan },
-    -- -- a floating point constant: 2.3e10
+    -- a floating point constant: 2.3e10
     Float = { fg = colors.yellow.rhea },
-    -- -- any statement
+    -- any statement
     Statement = { fg = colors.purple.nebula },
-    -- -- case, default, etc.
+    -- case, default, etc.
     Label = { fg = colors.blue.neptune },
     -- sizeof", "+", "*", etc.
     Operator = { fg = colors.blue.neptune },
@@ -309,51 +309,51 @@ M.load_groups = function(colors, config)
     -- character that needs attention like , or .
     Delimiter = { fg = colors.blue.neptune },
     -- special things inside a comment
-    SpecialComment = { fg = colors.gray.dust },
+    SpecialComment = { fg = colors.gray.dust , italic = true },
     -- debugging statements
     Debug = { fg = colors.yellow.rhea },
     -- text that stands out, HTML links
     Underlined = {
-      fg = colors.green.terra, --[[ style = 'underline' ]]
+      fg = colors.green.terra, underline = true
     },
     -- left blank, hidden
     Ignore = {
       fg = colors.blue.neptune,
-      bg = colors.gray.void, --[[ style = 'bold' ]]
+      bg = colors.gray.void, bold = true
     },
     -- any erroneous construct
     Error = {
       fg = colors.red.phobos,
-      bg = colors.none, --[[ style = 'bold,underline' ]]
+      bg = colors.none, bold = true, underline = true
     },
     -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
     Todo = {
       fg = colors.yellow.rhea,
-      bg = colors.none, --[[ style = 'bold,italic' ]]
+      bg = colors.none, bold = true, underline = true
     },
     -- normal comments
     Comment = {
-      fg = colors.gray.dust, --[[ style = config.styles.comments ]]
+      fg = colors.gray.dust, italic = true
     },
     -- normal if, then, else, endif, switch, etc.
     Conditional = {
-      fg = colors.blue.neptune, --[[ style = config.styles.keywords ]]
+      fg = colors.blue.neptune, bold = true, underline = true
     },
     -- normal for, do, while, etc.
     Keyword = {
-      fg = colors.blue.neptune, --[[ style = config.styles.keywords ]]
+      fg = colors.blue.neptune, bold = true, underline = true
     },
     -- normal any other keyword
     Repeat = {
-      fg = colors.blue.neptune, --[[ style = config.styles.keywords ]]
+      fg = colors.blue.neptune, bold = true, underline = true
     },
     -- normal function names
     Function = {
-      fg = colors.blue.neptune, --[[ style = config.styles.functions ]]
+      fg = colors.blue.neptune, italic = true
     },
     -- any variable name
     Identifier = {
-      fg = colors.white.smoke, --[[ style = config.styles.variables ]]
+      fg = colors.white.smoke, italic = true
     },
     -- any string
     String = { fg = colors.green.terra },
@@ -490,7 +490,7 @@ M.load_groups = function(colors, config)
     -- Virtual text "Error"
     LspDiagnosticsVirtualTextError = { fg = colors.red.phobos },
     -- used to underline "Error" diagnostics.
-    -- LspDiagnosticsUnderlineError = { [[ style = config.styles.diagnostics ]], sp = colors.red.phobos },
+    LspDiagnosticsUnderlineError = { underline = true, fg = colors.red.phobos },
     -- used for "Warning" diagnostic signs in sign column
     LspDiagnosticsDefaultWarning = { fg = colors.yellow.titan },
     -- used for "Warning" diagnostic signs in sign column
@@ -500,7 +500,7 @@ M.load_groups = function(colors, config)
     -- Virtual text "Warning"
     LspDiagnosticsVirtualTextWarning = { fg = colors.yellow.titan },
     -- used to underline "Warning" diagnostics.
-    -- LspDiagnosticsUnderlineWarning = { style = config.styles.diagnostics, sp = colors.yellow.titan },
+    LspDiagnosticsUnderlineWarning = { underline = true, fg = colors.yellow.rhea },
     -- used for "Information" diagnostic virtual text
     LspDiagnosticsDefaultInformation = { fg = colors.yellow.rhea },
     -- used for "Information" diagnostic signs in sign column
@@ -510,7 +510,7 @@ M.load_groups = function(colors, config)
     -- Virtual text "Information"
     LspDiagnosticsVirtualTextInformation = { fg = colors.yellow.rhea },
     -- used to underline "Information" diagnostics.
-    -- LspDiagnosticsUnderlineInformation = { style = config.styles.diagnostics, sp = colors.yellow.rhea },
+    LspDiagnosticsUnderlineInformation = { underline = true, fg = colors.yellow.rhea },
     -- used for "Hint" diagnostic virtual text
     LspDiagnosticsDefaultHint = { fg = colors.green.terra },
     -- used for "Hint" diagnostic signs in sign column
