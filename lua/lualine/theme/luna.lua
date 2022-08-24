@@ -1,4 +1,4 @@
-local colors = require("luna.colors").load()
+local colors = require('luna.colors').load()
 
 local luna = {}
 

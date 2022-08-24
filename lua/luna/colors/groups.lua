@@ -531,7 +531,7 @@ M.load_groups = function(colors, config)
     LspSignatureActiveParameter = { fg = colors.none, bg = colors.gray.deep, bold = true },
     LspCodeLens = { fg = colors.gray.dust },
 
-    NvimTreeSymlink = { fg = colors.blue.triton , bold = true },
+    NvimTreeSymlink = { fg = colors.blue.triton, bold = true },
     NvimTreeRootFolder = { fg = colors.green.terra, bold = true },
     NvimTreeFolderName = { fg = colors.blue.tidal },
     NvimTreeFolderIcon = { fg = colors.blue.neptune },
@@ -544,7 +544,7 @@ M.load_groups = function(colors, config)
     NvimTreeGitDeleted = { fg = colors.red.deimos },
     NvimTreeExecFile = { fg = colors.green.terra, bold = true },
     NvimTreeOpenedFile = { fg = colors.none },
-    NvimTreeSpecialFile = { fg = colors.yellow.titan, underline = true},
+    NvimTreeSpecialFile = { fg = colors.yellow.titan, underline = true },
     NvimTreeImageFile = { fg = colors.purple.nebula, bold = true },
     NvimTreeNormal = { fg = colors.white.smoke, bg = colors.active },
     NvimTreeCursorLine = { bg = colors.gray.gloom },
