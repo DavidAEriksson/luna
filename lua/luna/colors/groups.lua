@@ -309,51 +309,66 @@ M.load_groups = function(colors, config)
     -- character that needs attention like , or .
     Delimiter = { fg = colors.blue.neptune },
     -- special things inside a comment
-    SpecialComment = { fg = colors.gray.dust , italic = true },
+    SpecialComment = { fg = colors.gray.dust, italic = true },
     -- debugging statements
     Debug = { fg = colors.yellow.rhea },
     -- text that stands out, HTML links
     Underlined = {
-      fg = colors.green.terra, underline = true
+      fg = colors.green.terra,
+      underline = true,
     },
     -- left blank, hidden
     Ignore = {
       fg = colors.blue.neptune,
-      bg = colors.gray.void, bold = true
+      bg = colors.gray.void,
+      bold = true,
     },
     -- any erroneous construct
     Error = {
       fg = colors.red.phobos,
-      bg = colors.none, bold = true, underline = true
+      bg = colors.none,
+      bold = true,
+      underline = true,
     },
     -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
     Todo = {
       fg = colors.yellow.rhea,
-      bg = colors.none, bold = true, underline = true
+      bg = colors.none,
+      bold = true,
+      underline = true,
     },
     -- normal comments
     Comment = {
-      fg = colors.gray.dust, italic = true
+      fg = colors.gray.dust,
+      italic = true,
     },
     -- normal if, then, else, endif, switch, etc.
     Conditional = {
-      fg = colors.blue.neptune, bold = true, underline = true
+      fg = colors.blue.neptune,
+      bold = true,
+      underline = true,
     },
     -- normal for, do, while, etc.
     Keyword = {
-      fg = colors.blue.neptune, bold = true, underline = true
+      fg = colors.blue.neptune,
+      bold = true,
+      underline = true,
     },
     -- normal any other keyword
     Repeat = {
-      fg = colors.blue.neptune, bold = true, underline = true
+      fg = colors.blue.neptune,
+      bold = true,
+      underline = true,
     },
     -- normal function names
     Function = {
-      fg = colors.blue.neptune, italic = true
+      fg = colors.blue.neptune,
+      italic = true,
     },
     -- any variable name
     Identifier = {
-      fg = colors.white.smoke, italic = true
+      fg = colors.white.smoke,
+      italic = true,
     },
     -- any string
     String = { fg = colors.green.terra },
