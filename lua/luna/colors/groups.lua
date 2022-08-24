@@ -412,7 +412,7 @@ M.load_groups = function(colors, config)
     TelescopeSelection = { fg = colors.blue.triton },
 
     -- ###### Luna Bufferline Groups ####### --
-    BufferLineIndicatorSelected = { fg = colors.red.deimos, bg = colors.red.deimos },
+    BufferLineIndicatorSelected = { fg = colors.green.terra, bg = colors.green.terra },
     BufferLineFill = { fg = colors.gray.void, bg = colors.gray.deep },
     BufferLineTabSelected = { fg = colors.red.deimos, bg = colors.gray.void, bold = true, italic = true },
     BufferCurrent = { fg = colors.white.smoke, bg = colors.gray.void },
@@ -520,16 +520,39 @@ M.load_groups = function(colors, config)
     -- Virtual text "Hint"
     LspDiagnosticsVirtualTextHint = { fg = colors.green.terra },
     -- used to underline "Hint" diagnostics.
-    -- LspDiagnosticsUnderlineHint = { style = config.styles.diagnostics, sp = colors.green.terra },
+    LspDiagnosticsUnderlineHint = { underline = true, fg = colors.green.terra },
     -- used for highlighting "text" references
-    -- LspReferenceText = { underline = true, sp = colors.yellow.rhea },
+    LspReferenceText = { underline = true, fg = colors.yellow.rhea },
     -- used for highlighting "read" references
-    -- LspReferenceRead = { underline = true, sp = colors.yellow.rhea },
+    LspReferenceRead = { underline = true, fg = colors.yellow.rhea },
     -- used for highlighting "write" references
-    -- LspReferenceWrite = { underline = true, sp = colors.yellow.rhea },
+    LspReferenceWrite = { underline = true, fg = colors.yellow.rhea },
 
     LspSignatureActiveParameter = { fg = colors.none, bg = colors.gray.deep, bold = true },
     LspCodeLens = { fg = colors.gray.dust },
+
+    NvimTreeSymlink = { fg = colors.blue.triton , bold = true },
+    NvimTreeRootFolder = { fg = colors.green.terra, bold = true },
+    NvimTreeFolderName = { fg = colors.blue.tidal },
+    NvimTreeFolderIcon = { fg = colors.blue.neptune },
+    NvimTreeEmptyFolderName = { fg = colors.gray.dusk },
+    NvimTreeOpenedFolderName = { fg = colors.green.terra, italic = true },
+    NvimTreeIndentMarker = { fg = colors.blue.tidal },
+    NvimTreeGitDirty = { fg = colors.yellow.titan },
+    NvimTreeGitNew = { fg = colors.green.terra },
+    NvimTreeGitStaged = { fg = colors.purple.nebula },
+    NvimTreeGitDeleted = { fg = colors.red.deimos },
+    NvimTreeExecFile = { fg = colors.green.terra, bold = true },
+    NvimTreeOpenedFile = { fg = colors.none },
+    NvimTreeSpecialFile = { fg = colors.yellow.titan, underline = true},
+    NvimTreeImageFile = { fg = colors.purple.nebula, bold = true },
+    NvimTreeNormal = { fg = colors.white.smoke, bg = colors.active },
+    NvimTreeCursorLine = { bg = colors.gray.gloom },
+    NvimTreeVertSplit = { fg = colors.gray.dusk, bg = colors.gray.dusk },
+    LspDiagnosticsError = { fg = colors.red.deimos },
+    LspDiagnosticsWarning = { fg = colors.yellow.titan },
+    LspDiagnosticsInformation = { fg = colors.green.terra },
+    LspDiagnosticsHint = { fg = colors.blue.tidal },
   }
   return groups
 end
